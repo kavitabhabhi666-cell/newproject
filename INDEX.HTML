@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Madhur Mithila - Makhana Store</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script>
+   (function(){
+      emailjs.init("YOUR_PUBLIC_KEY"); // replace with your Public Key
+   })();
+</script>
+
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo">Madhur Mithila</div>
+        <nav>
+            <ul>
+                <li><a href="#catalog">Products</a></li>
+                <li><a href="#cart">Cart</a></li>
+                <li><a href="#checkout">Checkout</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>कोसी का उपहार , मिथिला का असली स्वाद</h1>
+        <p>Premium Makhana direct from farmers to your home.</p>
+    </section>
+
+    <!-- Product Catalog -->
+    <section id="catalog" class="catalog">
+        <h2>Our Products</h2>
+        <div class="products" id="products-container">
+            <!-- Products will be loaded here from WooCommerce REST API -->
+        </div>
+    </section>
+
+    <!-- Cart Section -->
+    <section id="cart" class="cart">
+        <h2>Your Cart</h2>
+        <div id="cart-items">
+            <!-- Cart items will appear here -->
+        </div>
+        <div id="cart-total">
+            Total: ₹0
+        </div>
+        <button id="checkout-btn">Proceed to Checkout</button>
+    </section>
+
+    <!-- Checkout Section -->
+    <section id="checkout" class="checkout">
+        <h2>Checkout</h2>
+        <form id="checkout-form">
+            <input type="text" name="name" placeholder="Full Name" required>
+            <input type="email" name="email" placeholder="Email" required>
+            <input type="text" name="address" placeholder="Delivery Address" required>
+            <button type="submit">Pay Now</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Madhur Mithila. All Rights Reserved.</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="app.js"></script>
+</body>
+</html>
